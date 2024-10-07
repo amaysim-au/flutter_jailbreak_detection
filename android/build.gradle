@@ -28,6 +28,15 @@ apply plugin: 'kotlin-android'
 android {
     compileSdkVersion 33
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"  // Set the Kotlin JVM target version to 1.8
+    }
+
     if (project.android.hasProperty('namespace')) {
         namespace 'appmire.be.flutterjailbreakdetection'
     }
